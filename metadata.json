@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Remix CampusBloom",
+  "description": "Plataforma académica y organizador universitario botánico con lienzo en blanco, control de asistencia, cronograma, exámenes, investigación junior y perfil de estudiante.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Quicksand', sans-serif;
+    
+    /* Default Sakura & Matcha Variables (Light Warm Bone/Cream Tint) */
+    --theme-text-primary: #1c1917;
+    --theme-text-secondary: #44403c;
+    --theme-text-muted: #78716c;
+    --theme-card-bg: rgba(254, 252, 251, 0.82);
+    --theme-card-inner: rgba(255, 255, 255, 0.78);
+    --theme-card-border: rgba(255, 255, 255, 0.85);
+    --theme-card-border-top: rgba(255, 255, 255, 0.98);
+    --theme-card-bevel: inset 0 1px 1px 0 rgba(255, 255, 255, 0.95), 0 20px 40px -12px rgba(134, 78, 90, 0.16);
+    --theme-accent: #864e5a;
+    --theme-accent-light: #ffd9df;
+    --theme-accent-hover: #733f4a;
+    --theme-secondary: #4e6535;
+    --theme-secondary-light: #cde9ac;
+    --theme-shadow: rgba(134, 78, 90, 0.16);
+    --theme-nav-active-bg: #cde9ac;
+    --theme-nav-active-text: #2c4018;
+    --theme-nav-active-border: #a6c783;
+    --theme-header-badge-bg: rgba(255, 217, 223, 0.80);
+    --theme-header-badge-text: #864e5a;
+    --theme-header-badge-border: #ffb7c5;
+    --theme-canvas-overlay: rgba(253, 245, 246, 0.18);
+    --theme-btn-bg: linear-gradient(180deg, #ffffff 0%, #fdf2f4 100%);
+    --theme-btn-text: #864e5a;
+    --theme-btn-border: rgba(255, 255, 255, 0.95);
+    --theme-btn-shadow: 0 4px 8px -2px rgba(134, 78, 90, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    --theme-btn-press: 0 1px 2px rgba(134, 78, 90, 0.12), inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  [data-theme="sakura-matcha"] {
+    --theme-text-primary: #1c1917;
+    --theme-text-secondary: #44403c;
+    --theme-text-muted: #78716c;
+    --theme-card-bg: rgba(254, 252, 251, 0.82);
+    --theme-card-inner: rgba(255, 255, 255, 0.78);
+    --theme-card-border: rgba(255, 255, 255, 0.85);
+    --theme-card-border-top: rgba(255, 255, 255, 0.98);
+    --theme-card-bevel: inset 0 1px 1px 0 rgba(255, 255, 255, 0.95), 0 20px 40px -12px rgba(134, 78, 90, 0.16);
+    --theme-accent: #864e5a;
+    --theme-accent-light: #ffd9df;
+    --theme-accent-hover: #733f4a;
+    --theme-secondary: #4e6535;
+    --theme-secondary-light: #cde9ac;
+    --theme-shadow: rgba(134, 78, 90, 0.16);
+    --theme-nav-active-bg: #cde9ac;
+    --theme-nav-active-text: #2c4018;
+    --theme-nav-active-border: #a6c783;
+    --theme-header-badge-bg: rgba(255, 217, 223, 0.80);
+    --theme-header-badge-text: #864e5a;
+    --theme-header-badge-border: #ffb7c5;
+    --theme-canvas-overlay: rgba(253, 245, 246, 0.18);
+    --theme-btn-bg: linear-gradient(180deg, #ffffff 0%, #fdf2f4 100%);
+    --theme-btn-text: #864e5a;
+    --theme-btn-border: rgba(255, 255, 255, 0.95);
+    --theme-btn-shadow: 0 4px 8px -2px rgba(134, 78, 90, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    --theme-btn-press: 0 1px 2px rgba(134, 78, 90, 0.12), inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  [data-theme="bosque-nocturno"] {
+    --theme-text-primary: #f0fdf4;
+    --theme-text-secondary: #dcfce7;
+    --theme-text-muted: #86efac;
+    --theme-card-bg: rgba(10, 26, 17, 0.80);
+    --theme-card-inner: rgba(16, 38, 26, 0.78);
+    --theme-card-border: rgba(52, 211, 153, 0.24);
+    --theme-card-border-top: rgba(110, 231, 183, 0.45);
+    --theme-card-bevel: inset 0 1px 1px 0 rgba(110, 231, 183, 0.35), 0 20px 48px -10px rgba(6, 78, 59, 0.45);
+    --theme-accent: #34d399;
+    --theme-accent-light: rgba(52, 211, 153, 0.22);
+    --theme-accent-hover: #10b981;
+    --theme-secondary: #10b981;
+    --theme-secondary-light: rgba(16, 185, 129, 0.28);
+    --theme-shadow: rgba(6, 78, 59, 0.45);
+    --theme-nav-active-bg: #10b981;
+    --theme-nav-active-text: #ffffff;
+    --theme-nav-active-border: #34d399;
+    --theme-header-badge-bg: rgba(52, 211, 153, 0.25);
+    --theme-header-badge-text: #34d399;
+    --theme-header-badge-border: rgba(52, 211, 153, 0.45);
+    --theme-canvas-overlay: rgba(6, 20, 13, 0.65);
+    --theme-btn-bg: linear-gradient(180deg, #133a25 0%, #0c2618 100%);
+    --theme-btn-text: #f0fdf4;
+    --theme-btn-border: rgba(52, 211, 153, 0.40);
+    --theme-btn-shadow: 0 4px 10px -2px rgba(6, 78, 59, 0.55), inset 0 1px 0 rgba(110, 231, 183, 0.40);
+    --theme-btn-press: 0 1px 2px rgba(6, 78, 59, 0.30), inset 0 2px 4px rgba(0, 0, 0, 0.45);
+  }
+
+  [data-theme="azul-pizarra"] {
+    --theme-text-primary: #f8fafc;
+    --theme-text-secondary: #e2e8f0;
+    --theme-text-muted: #94a3b8;
+    --theme-card-bg: rgba(12, 22, 39, 0.80);
+    --theme-card-inner: rgba(20, 34, 58, 0.78);
+    --theme-card-border: rgba(56, 189, 248, 0.24);
+    --theme-card-border-top: rgba(125, 211, 252, 0.45);
+    --theme-card-bevel: inset 0 1px 1px 0 rgba(125, 211, 252, 0.35), 0 20px 48px -10px rgba(2, 132, 199, 0.45);
+    --theme-accent: #38bdf8;
+    --theme-accent-light: rgba(56, 189, 248, 0.22);
+    --theme-accent-hover: #0284c7;
+    --theme-secondary: #0284c7;
+    --theme-secondary-light: rgba(2, 132, 199, 0.28);
+    --theme-shadow: rgba(2, 132, 199, 0.45);
+    --theme-nav-active-bg: #0284c7;
+    --theme-nav-active-text: #ffffff;
+    --theme-nav-active-border: #38bdf8;
+    --theme-header-badge-bg: rgba(56, 189, 248, 0.25);
+    --theme-header-badge-text: #38bdf8;
+    --theme-header-badge-border: rgba(56, 189, 248, 0.45);
+    --theme-canvas-overlay: rgba(7, 16, 33, 0.68);
+    --theme-btn-bg: linear-gradient(180deg, #193556 0%, #0e2036 100%);
+    --theme-btn-text: #f8fafc;
+    --theme-btn-border: rgba(56, 189, 248, 0.40);
+    --theme-btn-shadow: 0 4px 10px -2px rgba(2, 132, 199, 0.55), inset 0 1px 0 rgba(125, 211, 252, 0.40);
+    --theme-btn-press: 0 1px 2px rgba(2, 132, 199, 0.30), inset 0 2px 4px rgba(0, 0, 0, 0.45);
+  }
+
+  [data-theme="grafito-monocromo"] {
+    --theme-text-primary: #fafafa;
+    --theme-text-secondary: #e4e4e7;
+    --theme-text-muted: #a1a1aa;
+    --theme-card-bg: rgba(20, 20, 24, 0.82);
+    --theme-card-inner: rgba(32, 32, 38, 0.80);
+    --theme-card-border: rgba(255, 255, 255, 0.16);
+    --theme-card-border-top: rgba(255, 255, 255, 0.38);
+    --theme-card-bevel: inset 0 1px 1px 0 rgba(255, 255, 255, 0.28), 0 20px 50px -10px rgba(0, 0, 0, 0.65);
+    --theme-accent: #ffffff;
+    --theme-accent-light: rgba(255, 255, 255, 0.15);
+    --theme-accent-hover: #e4e4e7;
+    --theme-secondary: #a1a1aa;
+    --theme-secondary-light: rgba(161, 161, 170, 0.25);
+    --theme-shadow: rgba(0, 0, 0, 0.65);
+    --theme-nav-active-bg: #ffffff;
+    --theme-nav-active-text: #09090b;
+    --theme-nav-active-border: #e4e4e7;
+    --theme-header-badge-bg: rgba(255, 255, 255, 0.18);
+    --theme-header-badge-text: #ffffff;
+    --theme-header-badge-border: rgba(255, 255, 255, 0.35);
+    --theme-canvas-overlay: rgba(10, 10, 12, 0.72);
+    --theme-btn-bg: linear-gradient(180deg, #33333b 0%, #1e1e24 100%);
+    --theme-btn-text: #ffffff;
+    --theme-btn-border: rgba(255, 255, 255, 0.30);
+    --theme-btn-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.30);
+    --theme-btn-press: 0 1px 2px rgba(0, 0, 0, 0.40), inset 0 2px 4px rgba(0, 0, 0, 0.50);
+  }
+
+  body {
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--theme-text-primary);
+    background-color: #fbf9f8;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* 3D Glassmorphism Cards with Bevel Top & Ambient Shadow */
+.glass-card, .bloom-glass {
+  background: var(--theme-card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--theme-card-border);
+  border-top: 1.5px solid var(--theme-card-border-top);
+  box-shadow: var(--theme-card-bevel);
+  color: var(--theme-text-primary);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.glass-card-subtle {
+  background: var(--theme-card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--theme-card-border);
+  border-top: 1px solid var(--theme-card-border-top);
+  box-shadow: 0 8px 24px -6px var(--theme-shadow);
+  color: var(--theme-text-primary);
+}
+
+.glass-inner, .bloom-inner {
+  background: var(--theme-card-inner);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--theme-card-border);
+  border-top: 1px solid var(--theme-card-border-top);
+  color: var(--theme-text-primary);
+}
+
+/* Tactile Neumorphic Buttons with Pressable Depth */
+.bloom-btn-pressable, .bloom-btn-neumorphic {
+  background: var(--theme-btn-bg);
+  color: var(--theme-btn-text);
+  border: 1px solid var(--theme-btn-border);
+  box-shadow: var(--theme-btn-shadow);
+  transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.bloom-btn-pressable:hover, .bloom-btn-neumorphic:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+.bloom-btn-pressable:active, .bloom-btn-neumorphic:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: var(--theme-btn-press);
+}
+
+.glow-pink {
+  box-shadow: 0 0 25px rgba(255, 183, 197, 0.7), 0 0 10px rgba(255, 140, 165, 0.4);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(197, 225, 165, 0.6), 0 0 8px rgba(124, 169, 130, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-accent);
+  opacity: 0.4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent);
+  opacity: 0.8;
+}
+
+.glow-pink {
+  box-shadow: 0 0 25px rgba(255, 183, 197, 0.7), 0 0 10px rgba(255, 140, 165, 0.4);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(197, 225, 165, 0.6), 0 0 8px rgba(124, 169, 130, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-accent);
+  opacity: 0.4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent);
+  opacity: 0.8;
+}
+
